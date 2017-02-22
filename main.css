@@ -4,3 +4,14 @@ body
 {
     font-family: 'Libre Baskerville', serif;
 }
+
+header
+{
+    display: flex;
+    align-items: center;
+}
+
+header > img + h1
+{
+    padding-left: 0.5em;
+}
