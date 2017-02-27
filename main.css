@@ -15,3 +15,9 @@ header > img + h1
 {
     padding-left: 0.5em;
 }
+
+footer
+{
+    margin-top: 3.0em;
+    font-size: smaller;
+}
