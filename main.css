@@ -5,15 +5,30 @@ body
     font-family: 'Libre Baskerville', serif;
 }
 
-header
+header > a
 {
     display: flex;
     align-items: center;
 }
 
-header > img + h1
+header img + h1
 {
     padding-left: 0.5em;
+}
+
+header > a
+{
+    text-decoration: none;
+}
+
+header > a, header > a:hover, header > a:visited
+{
+    color: black;
+}
+
+header > a:hover
+{
+    text-decoration: underline;
 }
 
 footer
