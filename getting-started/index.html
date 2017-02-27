@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting started | Brainsick&#x2122; code compiler</title>
+    <link href="../main.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="../logo.svg" />
+  </head>
+  <body>
+    <header>
+      <img src="../logo.svg" alt="" />
+      <h1>Brainsick&#x2122; code compiler</h1>
+    </header>
+
+    <article>
+      <h1>Getting started</h1>
+
+      <p>
+	These instructions should work on most GNU/Linux
+	distributions, such as Arch, Debian, Fedora, and Ubuntu.  An
+	x86_64 processor is required.
+      </p>
+
+      <section>
+        <h1>Download and install</h1>
+	<code class="codeblock">
+curl &quot;<a href="https://gitlab.com/brainsick/build/builds/artifacts/master/file/out/bin/bscc-x86_64.AppImage?job=build">https://gitlab.com/brainsick/build/builds/artifacts/master/file/out/bin/bscc-x86_64.AppImage?job=build</a>&quot; &gt; bscc
+chmod +x bscc
+sudo mv bscc /usr/local/bin/
+	</code>
+      </section>
+
+      <section>
+        <h1>Write a Hello World application</h1>
+	<code class="codeblock">
+cat &lt;&lt;EOF &gt; hello.bas
+Sub Main()
+    Call MsgBox(&quot;Hello, world!&quot;)
+End Sub
+EOF
+	</code>
+      </section>
+
+      <section>
+        <h1>Compile your application</h1>
+	<code class="codeblock">
+bscc hello.bas -o hello.exe
+	</code>
+      </section>
+
+      <section>
+        <h1>Run your application</h1>
+	<p>First, install Wine from your operating system package
+	manager.  Then run the following:</p>
+	<code class="codeblock">
+wine ./hello.exe
+	</code>
+      </section>
+    </article>
+
+    <footer>
+      <p>
+        Copyright © 2017 Iain Nicol.  This website is licensed under
+        the <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU
+        Affero General Public License</a>, either version 3 of the
+        License, or any later version.
+      </p>
+      <p>
+        Logo thanks
+        to <a href="https://thenounproject.com/icon/475570/">Icon
+        Island</a>.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -21,3 +21,9 @@ footer
     margin-top: 3.0em;
     font-size: smaller;
 }
+
+.codeblock
+{
+    display: block;
+    white-space: pre-wrap;
+}
